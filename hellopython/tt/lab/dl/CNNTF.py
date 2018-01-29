@@ -432,7 +432,7 @@ class CNNTFTestCase():
             a = sess.run(cost, {X: np.random.randn(4,64,64,3), Y: np.random.randn(4,6)})
             print("cost = " + str(a))
     def test_model(self, X_train, Y_train, X_test, Y_test):
-        _, _, parameters = cnn.model(X_train, Y_train, X_test, Y_test,learning_rate = 0.001,num_epochs = 200)
+        _, _, parameters = cnn.model(X_train, Y_train, X_test, Y_test,learning_rate = 0.009,num_epochs = 100)
 ## TFConvNNTestCase ##################
 if __name__ == '__main__':
     tc = CNNTFTestCase();
@@ -442,6 +442,6 @@ if __name__ == '__main__':
     X_train,Y_train,X_test,Y_test = tc.showData(X_train_orig,Y_train_orig,X_test_orig, Y_test_orig)
 #     X, Y = tc.test_create_placeholders();
 #     tc.test_initialize_parameters();
-#     tc.test_forward_propagation();
-#     tc.test_compute_cost();
+    tc.test_forward_propagation();
+    tc.test_compute_cost();
     tc.test_model(X_train, Y_train, X_test, Y_test);
