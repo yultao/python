@@ -91,7 +91,7 @@ class UnivariateLinearRegression():
         theta = np.linalg.inv(X.T.dot(X)).dot(X.T).dot(y)
         return theta
 if __name__ == '__main__':
-    data = np.loadtxt("../data/ex1data1.txt", delimiter=',', skiprows=0)
+    data = np.loadtxt("./data/ex1data1.txt", delimiter=',', skiprows=0)
     m = data.shape[0]
     X = np.ones((m,2))
     X[:,1] = data[:,0]

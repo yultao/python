@@ -1,0 +1,2 @@
+model_checkpoint_path: "cnn_tf_mnist_on_sign_parameters.ckpt"
+all_model_checkpoint_paths: "cnn_tf_mnist_on_sign_parameters.ckpt"

@@ -35,10 +35,10 @@ class MultivariateLinearRegression():
 if __name__ == '__main__':
     
     mlr = MultivariateLinearRegression()
-    data = np.loadtxt("../data/ex1data2.txt", delimiter=',', skiprows=0)
+    data = np.loadtxt("./data/ex1data2.txt", delimiter=',', skiprows=0)
     m = data.shape[0]
     n = data.shape[1]
-    
+    print("data.shape ", data.shape)
     X_orig = data[:,0:n-1]
     mu, sigma, X_norm=mlr.featureNormalize(X_orig)
     X = np.ones((m,n))
@@ -46,8 +46,8 @@ if __name__ == '__main__':
     
     y = np.zeros((m,1))
     y[:,0] = data[:,-1]
-    
-
+    plt.scatter(X_orig[:,0], y, marker="x", color="red")
+    plt.show();
     
     alpha = 0.01
     num_iters = 400

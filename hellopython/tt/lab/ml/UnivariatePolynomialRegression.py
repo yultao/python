@@ -60,7 +60,7 @@ class UnivariatePolynomialRegression(object):
         return y
     
 if __name__ == '__main__':
-    data = np.loadtxt("../data/ex1data3.txt", delimiter=',', skiprows=0)
+    data = np.loadtxt("./data/ex1data3.txt", delimiter=',', skiprows=0)
     upr = UnivariatePolynomialRegression()
     upr.plotData(data)
     
