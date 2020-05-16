@@ -113,10 +113,10 @@ if __name__ == '__main__':
     """
     initial data
     """
-    data = scipy.io.loadmat("../data/ex4data1.mat")
+    data = scipy.io.loadmat("./data/ex4data1.mat")
     X = data["X"]
     y = data["y"]
-    weights= scipy.io.loadmat("../data/ex4weights.mat")
+    weights= scipy.io.loadmat("./data/ex4weights.mat")
 
     Theta1 = weights["Theta1"]
     Theta2 = weights["Theta2"]

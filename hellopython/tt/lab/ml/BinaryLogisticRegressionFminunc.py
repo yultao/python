@@ -54,7 +54,7 @@ def predict( X, theta):
     y = sigmoid(X.dot(theta)) >= 0.5
     return y
 if __name__ == '__main__':
-    data = np.loadtxt("../data/ex2data1.txt", delimiter=',', skiprows=0)
+    data = np.loadtxt("./data/ex2data1.txt", delimiter=',', skiprows=0)
     plotData(data)
     
     m = data.shape[0]

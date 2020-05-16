@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.io
-import DataLoader as loader
+from tt.lab.util import DataLoader as loader
 import scipy.optimize as op
 
 def featureNormalize(X):
@@ -80,7 +80,7 @@ def predictOneVsAll(all_theta, X):
     return p
 
 if __name__ == '__main__':
-    data = loader.loadMat("../data/ex3data1.mat")
+    data = loader.loadMat("./data/ex3data1.mat")
     X = data["X"]
     y = data["y"]
     print(X.shape)

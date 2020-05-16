@@ -27,10 +27,10 @@ class NeuralNetworkPredictOnly():
         return p
     
 if __name__ == '__main__':
-    data = scipy.io.loadmat("../data/ex3data1.mat")
+    data = scipy.io.loadmat("./data/ex3data1.mat")
     X = data["X"]
     y = data["y"]
-    weights= scipy.io.loadmat("../data/ex3weights.mat")
+    weights= scipy.io.loadmat("./data/ex3weights.mat")
     Theta1 = weights["Theta1"]
     Theta2 = weights["Theta2"]
     nn = NeuralNetworkPredictOnly()

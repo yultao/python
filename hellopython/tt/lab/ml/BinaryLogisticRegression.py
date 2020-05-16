@@ -102,7 +102,7 @@ class BinaryLogisticRegression():
         return y
 
 if __name__ == '__main__':
-    data = np.loadtxt("../data/ex2data1.txt", delimiter=',', skiprows=0)
+    data = np.loadtxt("./data/ex2data1.txt", delimiter=',', skiprows=0)
     blr = BinaryLogisticRegression()
     blr.plotData(data)
     

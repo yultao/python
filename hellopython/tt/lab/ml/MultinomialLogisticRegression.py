@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.io
-import DataLoader as loader
+from tt.lab.util import DataLoader as loader
 
 ''' In statistics, multinomial logistic regression is a classification method that generalizes logistic regression to multiclass problems, 
 i.e. with more than two possible discrete outcomes.
@@ -72,7 +72,7 @@ class MultinomialLogisticRegression():
         p = p.reshape(m,1)
         return p
 if __name__ == '__main__':
-    data = loader.loadMat("../data/ex3data1.mat")
+    data = loader.loadMat("./data/ex3data1.mat")
     X = data["X"]
     y = data["y"]
     print(X.shape)

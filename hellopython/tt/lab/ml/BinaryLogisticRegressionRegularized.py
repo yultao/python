@@ -122,7 +122,7 @@ class BinaryLogisticRegressionRegularized():
         y = self.sigmoid(X.dot(theta)) >= 0.5
         return y
 if __name__ == '__main__':
-    data = np.loadtxt("../data/ex2data2.txt", delimiter=',', skiprows=0)
+    data = np.loadtxt("./data/ex2data2.txt", delimiter=',', skiprows=0)
     blrr = BinaryLogisticRegressionRegularized()
     blrr.plotData(data)
     
@@ -168,7 +168,7 @@ if __name__ == '__main__':
     print("test gradient descent")
     initial_theta = np.zeros((X.shape[1], 1));
     lambd = 0
-    iterations = 500000
+    iterations = 5000
     alpha = 0.001
     optimized_theta,J_history = blrr.gradientDescent( X, y, initial_theta, alpha, iterations, lambd)
     print(optimized_theta)

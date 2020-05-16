@@ -103,7 +103,7 @@ def plotBoundary( data, optimized_theta):
     plt.contour(u, v, z, [0])
     plt.show()
 if __name__ == '__main__':
-    data = np.loadtxt("../data/ex2data2.txt", delimiter=',', skiprows=0)
+    data = np.loadtxt("./data/ex2data2.txt", delimiter=',', skiprows=0)
     plotData(data)
     
     m = data.shape[0]
