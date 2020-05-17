@@ -6,8 +6,9 @@ Created on Sep 27, 2017
 @author: yultao
 '''
 
-
+print("NAME: " + __name__)
 if __name__ == '__main__':
+    print("MAIN")
     pass
 
 a=101
@@ -60,7 +61,9 @@ for a,b in adic.items():
     
 ###############################
 
-
+a = dir(another)
+print(a)
 another.whoami()
 
+print(another.__name__)
 print(random.randrange(0,100))

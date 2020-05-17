@@ -1,7 +1,7 @@
 import numpy as np
 
 
-
+print("STATEMENTS in another starts")
 
 e=np.eye(10)
 print(e)
@@ -19,10 +19,13 @@ print(aa)
 
 y=np.array([0.1,0.3,0.4,0.2])
 print(y.ravel())
-idx = np.random.choice(3, p = y.ravel())
+idx = np.random.choice(4, 3, p = y.ravel())
 print(idx)
+print("STATEMENTS in another ends")
 
-if(False):
+def whoami():
+    print("I am another!")
+if False:
 
     print(np.power(2,3))
     
@@ -45,3 +48,11 @@ if(False):
     print(concat[: n_a, :])
     
     print(concat[n_a :, :])
+
+# if it is executed directly __name__ is '__main__';
+# if it is imported by other modules, __name__ is 'another', which is the same as the file name
+print("NAME in another: " + __name__)
+
+if __name__ == '__main__':
+    print("MAIN")
+    pass
